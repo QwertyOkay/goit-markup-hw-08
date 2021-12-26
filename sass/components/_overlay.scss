@@ -1,0 +1,43 @@
+.overlay {
+    position: absolute;
+    bottom: 0;
+    align-items: center;
+    width: 100%;
+    height: 294px;
+    background-color: var(--overlay-card-color);
+    
+    transform: translateY(101%);
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--function);
+    overflow-y: auto;
+  }
+
+.overlay::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .overlay::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--first-text-color);
+    border-radius: 10px;
+  }
+  
+  .overlay::-webkit-scrollbar-thumb {
+    background: var(--btn-accent-color);
+    border-radius: 10px;
+  }
+  
+  .overlay::-webkit-scrollbar-thumb:hover {
+    background: var(--first-text-color);
+  }
+  
+  .overlay__text {
+    margin: 0;
+    padding: 63px 24px;
+    color: var(--main-title-color);
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }

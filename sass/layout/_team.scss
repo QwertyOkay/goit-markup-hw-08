@@ -1,0 +1,14 @@
+.section--background-color {
+    background-color: #f5f4fa;
+  }
+
+  .team__list {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    list-style: none;
+  }
+  
+  .team__list:last-child {
+    margin-right: 0;
+  }

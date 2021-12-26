@@ -1,0 +1,27 @@
+.filter__list {
+    padding-top: 0;
+    padding-right: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    line-height: 1.62;
+  }
+  
+  .filter__item:last-child {
+    margin-right: 0;
+  }
+  
+  .filter__item {
+    display: flex;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+
+  
+  

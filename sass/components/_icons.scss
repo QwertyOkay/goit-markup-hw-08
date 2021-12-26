@@ -1,0 +1,49 @@
+.icon__send {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+
+    &--append {
+      margin-left: 10px;
+    }
+  }
+  
+  .icon__social {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .icon__close {
+    fill: currentColor;
+    width: 18px;
+    height: 18px;
+  }
+
+  .modal__input:focus + .icon__modal-img {
+    fill: var(--accent-color);
+  }
+
+  .icon__modal-img {
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    color: #000000;
+    transition-property: fill;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--function);
+    display: inline-block;
+    /* fill: currentColor; */
+  }
+
+  .icon__client {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+  }
+
+  
