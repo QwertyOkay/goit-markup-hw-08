@@ -1,8 +1,10 @@
 .icon__send {
     width: 24px;
     height: 24px;
+    // margin-left: 10px;
+    vertical-align: middle;
     fill: currentColor;
-
+    
     &--append {
       margin-left: 10px;
     }

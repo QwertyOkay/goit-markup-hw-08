@@ -2,24 +2,47 @@
     background: var(--main-site-section);
     padding-top: 60px;
     padding-bottom: 60px;
+    // display: block;
   }
   
   .footer__container {
-    display: flex;
-    align-items: baseline;
+    // display: flex;
+    // align-items: baseline;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+      text-align: left;
+    }
   }
   
   .footer__content {
-    margin-right: 70px;
-}
+    margin-bottom: 60px;
+    text-align: center;
+
+    @media screen and(max-width:767px) {
+        margin-bottom: 60px;
+      }
+
+    @media screen and(min-width:768px) {
+      // margin-right: 70px;
+      margin-bottom: 60px;
+    }
+
+    @media screen and(min-width:1200px) {
+      // margin-right: 97px;
+      margin-right: 70px;
+    }
+  }
 
 .footer__thumb--social {
-  margin-right: auto;
+  // margin-right: auto;
+  margin-bottom: 60px;
 }
   
 
   .footer__text {
-    display: block;
+    // display: block;
     /* margin-bottom: 20px; */
     font-weight: 700;
     font-size: 14px;
@@ -28,6 +51,27 @@
     text-transform: uppercase;
     color: #ffffff;
     margin-bottom: 20px;
+  }
+
+.footer__address {
+    text-decoration: none;
+    display: block;
+    padding: 0;
+    margin-bottom: 9px;
+
+    color: #ffffff;
+
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+
+    @media screen and(min-width: 1200px) {
+      margin-bottom: 5px;
+    }
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 
   .footer__link {
@@ -43,24 +87,14 @@
     transition-duration: var(--duration);
     transition-timing-function: var(--function);
 
+    @media screen and(min-width:1200px) {
+      margin-bottom: 5px;
+    }
+  
     &:hover,
     &:focus {
       color: $accent-color;
   }
-  }
-
-.footer__address {
-    text-decoration: none;
-    display: block;
-    padding: 0;
-    margin-bottom: 9px;
-    color: #ffffff;
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    margin: 0;
-    padding: 0;
-    list-style: none;
   }
 
   .footer__item {
@@ -68,5 +102,18 @@
   }
   
   .form__subscribe {
-    margin-right: auto;
+    display: block;
+    margin-top: 0em;
+  }
+
+  .footer-tablet {
+    @media screen and(min-width:768px) {
+      display: flex;
+      justify-content: space-around;
+      // align-items: baseline;
+    }
+    @media screen and(min-width:1200px) {
+      justify-content: none;
+      align-items: baseline;
+    }
   }
