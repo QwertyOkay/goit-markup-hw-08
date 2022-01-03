@@ -1,7 +1,16 @@
 .container {
-    // width: 1200px;
+    min-width: 200px;
     padding: 0px 15px;
     margin: 0 auto;
+
+    .hero & {
+      max-width: 360px;
+      padding: 0;
+      text-align: center;
+      @media screen and (min-width: 1200px) {
+        max-width: 696px;
+      }
+    } 
 
     @media screen and (min-width: 480px) {
       width: 480px;

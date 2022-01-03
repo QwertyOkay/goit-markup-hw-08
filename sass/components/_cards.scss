@@ -2,9 +2,9 @@
     padding: 30px 32px;
   }
   
-  .card__content:last-child {
-    margin-right: 0;
-  }
+  // .card__content:last-child {
+  //   margin-right: 0;
+  // }
 
   .card__title {
     margin-bottom: 10px;
@@ -37,7 +37,7 @@
     @media screen and (min-width: 768px) {
       flex-basis: calc((100% - 2 * 30px) / 2);
       margin: 15px;
-      
+
       @media screen and (min-width: 1200px) {
         flex-basis: calc((100% - 3 * 30px) / 4);
         margin-bottom: 0;
