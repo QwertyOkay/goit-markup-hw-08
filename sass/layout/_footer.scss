@@ -18,26 +18,21 @@
   
   .footer__content {
     margin-bottom: 60px;
-    text-align: center;
-
-    @media screen and(max-width:767px) {
-        margin-bottom: 60px;
-      }
-
-    @media screen and(min-width:768px) {
-      // margin-right: 70px;
-      margin-bottom: 60px;
-    }
-
     @media screen and(min-width:1200px) {
-      // margin-right: 97px;
       margin-right: 70px;
     }
   }
 
+  .footer-address {
+    margin-top: 20px;
+  }
+
 .footer__thumb--social {
-  // margin-right: auto;
+  margin-right: auto;
   margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    margin-right: 0;
+  }
 }
   
 
@@ -55,7 +50,7 @@
 
 .footer__address {
     text-decoration: none;
-    display: block;
+    // display: block;
     padding: 0;
     margin-bottom: 9px;
 
