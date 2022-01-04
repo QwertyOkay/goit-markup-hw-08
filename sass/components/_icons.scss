@@ -1,3 +1,10 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
 .icon__send {
     width: 24px;
     height: 24px;
@@ -48,4 +55,29 @@
     fill: currentColor;
   }
 
+  .icon__mob-menu {
+    width: 40px;
+    height: 40px;
+    fill: currentColor;
+  }
   
+  .icon__mail {
+    width: 14px;
+    height: 10px;
+
+    @media screen and (min-width: 1200px) {
+      width: 16px;
+      height: 12px;
+    }
+}
+
+.icon__tel {
+  width: 10px;
+  height: 14px;
+
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 16px;
+}
+}
+
