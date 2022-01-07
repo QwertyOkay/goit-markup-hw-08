@@ -10,7 +10,7 @@
     // clip-path: inset(50%);
     // margin: -1px;
 
-    position: absolute !important;
+  position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
   padding: 0 !important;
@@ -19,3 +19,26 @@
   width: 1px !important;
   overflow: hidden;
   }
+
+//   .backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: rgba(0, 0, 0, 0.2);
+//   opacity: 1;
+//   visibility: visible;
+//   transition-property: opacity, visibility;
+//   transition-duration: $duration, $duration;
+//   transition-timing-function: $function, $function;
+//   &.is-hidden .modal {
+//     transform: scale(3) translate(0) rotate(360deg);
+//   }
+// }
+
+  .is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+   }
