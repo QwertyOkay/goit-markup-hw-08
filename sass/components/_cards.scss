@@ -44,17 +44,13 @@
         &:first-child {
           margin-bottom: 0;
         }
-        &:not(:last-child) {
-          margin-right: 30px;
-        }
+        // &:not(:last-child) {
+        //   margin-right: 30px;
+        // }
       }
     }
   }
   
-  // .card:last-child {
-  //   margin-right: 0;
-  // }
-
   .card__img {
     width: 100%;
     height: auto;
