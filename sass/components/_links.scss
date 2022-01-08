@@ -1,15 +1,23 @@
 .link__portfolio {
-    width: 100%;
-    height: 100%;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  display: block;
+  transition-property: box-shadow;
+  transition-duration: $duration;
+  transition-timing-function: $function;
+  img {
     display: block;
-    text-decoration: none;
-    color: inherit;
-    transition: box-shadow var(--function);
-    transition-duration: var(--duration);
-    transition-timing-function: var(--function);
-
-    &:hover,
-    &:focus {
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    max-width: 100%;
+    height: auto;
+  }
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
 }

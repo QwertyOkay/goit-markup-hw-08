@@ -12,12 +12,6 @@
     transition-duration: var(--duration);
     transition-timing-function: var(--function);
     transition: opacity 250ms var(--function);
-    
-    // &--is-hidden {
-    //   visibility: hidden; 
-    //   opacity: 0;
-    //   pointer-events: none;
-    // }
   }
 
   .modal__backdrop.is-hidden {

@@ -2,9 +2,6 @@
     padding: 30px 32px;
   }
   
-  // .card__content:last-child {
-  //   margin-right: 0;
-  // }
 
   .card__title {
     margin-bottom: 10px;
@@ -44,9 +41,6 @@
         &:first-child {
           margin-bottom: 0;
         }
-        // &:not(:last-child) {
-        //   margin-right: 30px;
-        // }
       }
     }
   }
