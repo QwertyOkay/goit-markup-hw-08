@@ -383,6 +383,10 @@ body {
   }
 }
 
+.section.hero {
+  padding: 0;
+}
+
 .contacts__list {
   font-weight: 500;
   font-size: 14px;
@@ -441,25 +445,25 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .contacts__mail {
+  .contacts__link-mail {
     padding-top: 21px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .contacts__mail {
+  .contacts__link-mail {
     padding: 32px 0;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .contacts__tel {
+  .contacts__link-tel {
     padding-bottom: 21px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .contacts__tel {
+  .contacts__link-tel {
     padding: 32px 0;
   }
 }
@@ -690,23 +694,29 @@ body {
 }
 
 .heading__clients {
+  margin: 0 0 50px 0;
+  color: #212121;
   font-weight: 700;
   font-size: 28px;
-  line-height: 1.18;
-  text-align: center;
+  line-height: 1.17;
   letter-spacing: 0.03em;
-  color: var(--second-title-color);
-  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+  .heading__clients {
+    margin-bottom: 30px;
+  }
 }
 
 .heading__about,
 .heading__team {
-  font-weight: bold;
-  font-size: 36px;
+  margin: 0 0 50px 0;
+  font-weight: 700;
+  font-size: 28px;
   line-height: 1.17;
-  text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  text-align: center;
   color: var(--second-title-color);
 }
 
@@ -738,23 +748,26 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--main-title-color);
-  margin-bottom: 30px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .card {
-    flex-basis: calc((100% - 2 * 30px) / 2);
+    flex-basis: calc(100% / 2 - 30px);
     margin: 15px;
   }
 }
 
-@media screen and (min-width: 768px) and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .card {
-    flex-basis: calc((100% - 3 * 30px) / 4);
-    margin-bottom: 0;
-  }
-  .card:first-child {
-    margin-bottom: 0;
+    flex-basis: calc(100% / 4 - 30px);
   }
 }
 
@@ -973,6 +986,11 @@ body {
   z-index: 5;
   min-width: 320px;
   min-height: 100%;
+  transition: transform 250ms ease-in-out;
+}
+
+.is-hidden .mob-menu-container {
+  transform: translateY(-100%);
 }
 
 .mob-menu-container {
@@ -981,6 +999,10 @@ body {
   justify-content: space-between;
   height: 100%;
   padding: 48px 40px;
+  transform: translateY(0);
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mob-menu__list {
@@ -1037,6 +1059,7 @@ body {
 
 .mob-menu-contacts__tel {
   text-decoration: none;
+  font-weight: 500;
   font-size: 27px;
   line-height: 1.25;
   letter-spacing: 0.02em;
@@ -1115,10 +1138,9 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
   visibility: visible;
-  /* transition-property: visibility; */
-  transition-duration: var(--duration);
-  transition-timing-function: var(--function);
-  transition: opacity 250ms var(--function);
+  transition-property: opacity, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__backdrop.is-hidden {
@@ -1283,7 +1305,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 @media screen and (min-width: 480px) {
@@ -1303,7 +1325,7 @@ body {
 .modal__policy span {
   width: 16px;
   height: 15px;
-  border: 1px solid #000000;
+  border: 1.5px solid #000000;
   border-radius: 2px;
   margin-right: 7px;
   display: flex;
@@ -1406,7 +1428,7 @@ body {
 
 .header {
   border-bottom: 1px solid var(--line-color);
-  max-width: 479px;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
@@ -1493,14 +1515,16 @@ body {
 }
 
 .hero {
+  display: flex;
+  align-items: center;
   background: #2f303a;
   height: 400px;
   margin: 0 auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-mob-1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 118px;
-  padding-bottom: 198px;
+  padding: 118px 0;
+  background-position: center;
 }
 
 @media (min-resolution: 2dppx) {
@@ -1512,7 +1536,6 @@ body {
 @media screen and (min-width: 768px) {
   .hero {
     width: 100%;
-    max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-tab-1x.jpg);
   }
 }
@@ -1527,7 +1550,7 @@ body {
   .hero {
     width: 100%;
     max-width: 1600px;
-    height: 600px;
+    min-height: 600px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg-note-1x.jpg);
     padding-top: 200px;
   }
@@ -1580,7 +1603,7 @@ body {
     flex-wrap: wrap;
   }
   .feature__list li {
-    flex-basis: calc((100% - 2 * 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
     margin-bottom: 0;
   }
   .feature__list li:nth-child(2n + 1) {
@@ -1597,7 +1620,7 @@ body {
     flex-wrap: wrap;
   }
   .feature__list li {
-    flex-basis: calc((100% - 3 * 30px) / 4);
+    flex-basis: calc(100% / 4 - 30px);
     margin-bottom: 0;
   }
   .feature__list li:not(:last-child) {
@@ -1785,8 +1808,7 @@ body {
 
 .footer {
   background: var(--main-site-section);
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 }
 
 .footer__container {
@@ -1805,6 +1827,12 @@ body {
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__content {
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__content {
     margin-right: 70px;
@@ -1817,7 +1845,6 @@ body {
 
 .footer__thumb--social {
   margin-right: auto;
-  margin-bottom: 60px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1889,17 +1916,21 @@ body {
   margin-top: 0em;
 }
 
+.footer-tablet {
+  margin-bottom: 60px;
+}
+
 @media screen and (min-width: 768px) {
   .footer-tablet {
     display: flex;
     justify-content: space-around;
+    align-items: baseline;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer-tablet {
-    justify-content: none;
-    align-items: baseline;
+    margin-bottom: 0;
   }
 }
 
@@ -1989,7 +2020,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .portfolio__content {
-    flex-grow: +1;
+    flex-grow: 1;
   }
 }
 

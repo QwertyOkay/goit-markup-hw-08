@@ -8,7 +8,12 @@
     z-index: 5;
     min-width: 320px;
     min-height: 100%;
-  }
+    transition: transform 250ms ease-in-out;
+}
+
+.is-hidden .mob-menu-container {
+  transform: translateY(-100%);
+}
 
   .mob-menu-container {
     display: flex;
@@ -16,6 +21,11 @@
     justify-content: space-between;
     height: 100%;
     padding: 48px 40px;
+
+    transform: translateY(0);
+    transition-property: transform;
+    transition-duration: $duration;
+    transition-timing-function: $function;
   }
 
   .mob-menu__list {
@@ -68,6 +78,7 @@
 
   .mob-menu-contacts__tel {
     text-decoration: none;
+    font-weight: 500;
     font-size: 27px;
     line-height: 1.25;
     letter-spacing: 0.02em;

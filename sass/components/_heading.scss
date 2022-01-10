@@ -1,20 +1,25 @@
 .heading__clients {
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.18;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--second-title-color);
-    margin-bottom: 30px;
+  margin: 0 0 50px 0;
+  color: #212121;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  @media screen and (max-width: 1199px) {
+      margin-bottom: 30px;
   }
+}
+  
 
   .heading__about, 
   .heading__team  {
-    font-weight: bold;
-    font-size: 36px;
+    margin: 0 0 50px 0;
+    // color: #212121;
+    font-weight: 700;
+    font-size: 28px;
     line-height: 1.17;
-    text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+    text-align: center;
     color: var(--second-title-color);
   }
