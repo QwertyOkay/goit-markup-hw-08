@@ -517,59 +517,52 @@
         </svg>
     </button>
 
-    <p class="modal__heading">Оставьте свои данные, мы вам перезвоним</p>
-    <form name="modal__form" autocomplete="on" class="modal__form">
-        <div class="modal__thumb">
-            <label for="order-name" class="modal__label">Имя</label>
-            <div class="modal__icon">
-            <input type="text" name="order-name" id="order-name" 
-            class="modal__input"> 
+    
+    <form class="modal__form" name="modal__form" autocomplete="on">
+        <p class="modal__heading">Оставьте свои данные, мы вам перезвоним</p>
+        
+        <label class="modal__thumb">
+            <span for="order-name" class="modal__label">Имя</span>
+            <input class="modal__input" type="text" name="order-name" id="order-name"> 
             <svg class="icon__modal-img">
              <use href="./images/icons.svg#person"></use>  
             </svg>       
-            </div>
-        </div>
+        </label>
 
-        <div class="modal__thumb">
-            <label for="order-tel" class="modal__label">Телефон</label>
-            <div class="modal__icon">
+        <label class="modal__thumb">
+            <span for="order-tel" class="modal__label">Телефон</span>
             <input type="tel" name="order-tel" id="order-tel" class="modal__input"> 
             <svg class="icon__modal-img" >
                 <use href="./images/icons.svg#icon-phoneblack"></use>  
-               </svg>      
-            </div>  
-        </div>
+               </svg>       
+        </label>
 
-        <div class="modal__thumb">
-            <label for="order-mail" class="modal__label">Почта</label>
-            <div class="modal__icon">
+        <label class="modal__thumb">
+            <span for="order-mail" class="modal__label">Почта</span>
             <input type="email" name="order-mail" id="order-mail" class="modal__input">
             <svg class="icon__modal-img">
                 <use href="./images/icons.svg#icon-emailblack"></use>  
                </svg>      
-            </div>       
-            </div>
+            </label>       
 
-        <div class="modal__thumb-textarea">
-            <label for="modal-area" class="modal__label">Комментарий</label> 
+        <label class="modal__thumb">
+            <span for="modal-area" class="modal__label">Комментарий</span> 
             <textarea name="modal-area" id="modal-area" 
             placeholder="введите текст" class="modal__area"></textarea>
-        </div>
+        </label>
 
-        <div class="modal__checkbox">
+        <label class="modal__thumb">
             <input type="checkbox" name="modal__policy" id="modal__policy" 
             class="modal__checkbox-input visually-hidden">
-            <label for="modal__policy" class="modal__policy">
-                <span>
-                    <svg class="icon modal-check" width="11px" height="8px">
+             <svg class="icon__check modal-check">
                         <use href="./images/icons.svg#icon-check"></use>
                     </svg>
-                </span>
-                Соглашаюсь с рассылкой и принимаю &nbsp;
-              <a href="#" class="modal__link">Условия договора</a>
-            </label> 
+                    <span class="form__agreement"> 
+                    Соглашаюсь с рассылкой и принимаю
+                    <a href="#" class="modal__link">Условия договора</a>
+                    </span>
+                </label>
             <button type="submit" class="modal-button__btn">Отправить</button>
-        </div>
     </form>
     </div>
 </div>

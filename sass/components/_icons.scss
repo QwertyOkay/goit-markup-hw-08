@@ -37,16 +37,24 @@
     width: 18px;
     height: 18px;
     background-color: transparent;
+
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 12px;
+    top: 0;
+    left: 0;
+    // transform: translateY(-50%);
+    transform: translate(12px, 28px);
+    
     color: #000000;
     transition-property: fill;
-    transition-duration: var(--duration);
-    transition-timing-function: var(--function);
-    display: inline-block;
+    transition-duration: $duration;
+    transition-timing-function: $function;
     /* fill: currentColor; */
+  }
+
+  .icon__check {
+    width: 16px;
+    height: 15px;
+    fill: currentColor;
   }
 
   .icon__client {
