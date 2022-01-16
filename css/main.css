@@ -1027,6 +1027,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: black;
   border: 0;
 }
 .mob-menu__close-button:focus, .mob-menu__close-button:hover {
