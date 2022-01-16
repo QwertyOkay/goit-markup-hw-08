@@ -614,6 +614,7 @@ body {
 .button__open-menu {
   min-height: 40px;
   min-width: 40px;
+  color: #000000;
   background: transparent;
   fill: #000000;
   outline: none;
@@ -1020,8 +1021,8 @@ body {
   position: absolute;
   top: 10px;
   right: 15px;
-  width: 40px;
-  height: 40px;
+  min-height: 40px;
+  min-width: 40px;
   background-color: transparent;
   display: flex;
   align-items: center;
