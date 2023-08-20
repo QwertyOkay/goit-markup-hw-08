@@ -1,0 +1,33 @@
+.client {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+.client__item {
+  @include grid(2);
+  height: 92px;
+
+  @media screen and (min-width: 768px) {
+    @include grid(3);
+  }
+  @media screen and (min-width: 1200px) {
+    @include grid(6);
+  }
+}
+.client__thumb {
+  @include centeredFlex();
+  height: 100%;
+
+  @include background;
+  fill: getColorLight("icon");
+  border: 1px solid getColorLight("icon");
+  border-radius: 4px;
+
+  @include Animation(fill, border);
+
+  &:hover,
+  &:focus {
+    fill: getColorAccent("accent-primary");
+    border: 1px solid getColorAccent("accent-primary");
+  }
+}

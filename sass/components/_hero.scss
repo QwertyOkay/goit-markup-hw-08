@@ -1,0 +1,99 @@
+.hero-overlay {
+  @include background;
+  background-size: cover;
+  background-color: getColorLight("hero-bg");
+  background-image: linear-gradient(
+      to right,
+      getColorDark("avgDark-opacity40"),
+      getColorDark("avgDark-opacity40")
+    ),
+    url(../images/hero/hero-480.jpg);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        getColorDark("avgDark-opacity40"),
+        getColorDark("avgDark-opacity40")
+      ),
+      url(../images/hero/hero-960.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        to right,
+        getColorDark("avgDark-opacity40"),
+        getColorDark("avgDark-opacity40")
+      ),
+      url(../images/hero/hero-768.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          getColorDark("avgDark-opacity40"),
+          getColorDark("avgDark-opacity40")
+        ),
+        url(../images/hero/hero-1536.jpg);
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+        to right,
+        getColorDark("avgDark-opacity40"),
+        getColorDark("avgDark-opacity40")
+      ),
+      url(../images/hero/hero-1600.jpg);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          getColorDark("avgDark-opacity40"),
+          getColorDark("avgDark-opacity40")
+        ),
+        url(../images/hero/hero-3200.jpg);
+    }
+  }
+}
+.hero-section {
+  padding: 118px 0;
+
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+  }
+}
+.hero-section__title {
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62em;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: getColorLight("light");
+
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    line-height: 1.36em;
+  }
+}
+.hero-section__button {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 32px;
+}
+
+.hero-overlay__contacts {
+  width: 100%;
+  height: 100%;
+  background: #c4e2ff
+    url(https://theme.zdassets.com/theme_assets/224203/b75bbf344a4458edbe30bd2a46e05df92486b9e0.png)
+    50% 50% no-repeat;
+  background-size: cover;
+}

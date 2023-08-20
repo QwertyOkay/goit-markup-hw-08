@@ -1,0 +1,235 @@
+.menu-burger {
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.menu-burger__icon:hover,
+.menu-burger__icon:focus {
+  fill: getColorAccent("accent-primary");
+}
+.menu-container {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175em;
+  letter-spacing: 0.02em;
+
+  color: getColorDark("secondary");
+  background-color: getColorLight("light");
+
+  @media screen and (max-width: 767px) {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 32px 40px 40px;
+
+    transform: translateY(-100%);
+    @include Animation(transform);
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: scroll;
+
+      transform: translateY(0);
+      @include Animation(transform);
+    }
+  }
+
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    height: auto;
+    font-size: 28px;
+  }
+
+  @media screen and (min-width: 768px) {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 88px;
+
+    font-weight: 500;
+    @include regularText($l-s: 0.02em);
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+  }
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  // for iphone 6-8 landscape
+  @media screen and (min-width: 640px) and (max-width: 767px) {
+    right: calc(100vw - 80.5%);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-close__button:hover,
+.menu-close__button:focus {
+  fill: getColorAccent("accent-primary");
+}
+
+.navigation {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+  }
+}
+.navbox {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  &__item:not(:last-child) {
+    @media screen and (min-width: 768px) {
+      margin-right: 50px;
+    }
+  }
+}
+.navbox__item:not(:last-child),
+.authnav__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
+
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    margin-bottom: 16px;
+  }
+}
+
+.navbox__link {
+  color: getColorDark("secondary");
+
+  @include Animation(color);
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 0;
+  }
+  &:hover,
+  &:focus {
+    color: getColorAccent("accent-primary");
+  }
+}
+.navbox__link--current {
+  position: relative;
+
+  color: getColorAccent("accent-primary");
+
+  &::after {
+    @media screen and (min-width: 768px) {
+      content: "";
+      position: absolute;
+
+      display: block;
+      width: 100%;
+      height: 4px;
+      bottom: 0;
+
+      background-color: getColorAccent("accent-primary");
+      border-radius: 2px;
+    }
+  }
+}
+.authnav {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
+  @media screen and (max-width: 767px) and (orientation: landscape) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row-reverse;
+  }
+}
+.authnav__item:last-child {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 10px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 30px;
+  }
+}
+.authnav__link {
+  display: flex;
+  align-items: center;
+
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.17em;
+
+  color: getColorDark("theme");
+
+  @include Animation(color);
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include regularText($l-s: 0.02em);
+  }
+
+  &:hover,
+  &:focus {
+    color: getColorAccent("accent-primary");
+  }
+}
+.authnav__link--accent {
+  @media screen and (max-width: 767px) {
+    font-size: 28px;
+    color: getColorAccent("accent-primary");
+  }
+}
+
+.authnav__icon {
+  fill: currentColor;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 10px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 14px;
+    height: 14px;
+  }
+}
